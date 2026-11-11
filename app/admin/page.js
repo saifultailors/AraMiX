@@ -103,11 +103,11 @@ export default function AddProductAdmin() {
         .from('products')
         .insert({
           name: productName.trim(),
-          model: modelNo.trim(),
+          model_no: modelNo.trim(),
           price: parseFloat(regularPrice),
           offer_price: offerPrice === '' ? null : parseFloat(offerPrice),
           images: designUrls,
-          color_name: colorsWithUrls,
+          colors: colorsWithUrls,
           sizes: SIZE_LIST.filter((s) => availableSizes[s]),
           allow_custom: allowCustom,
         })
@@ -126,7 +126,7 @@ export default function AddProductAdmin() {
       setMessage({ type: 'ok', text: 'প্রোডাক্ট সফলভাবে পাবলিশ হয়েছে!', id: data.id });
     } catch (err) {
       console.error(err);
-      setMessage({\n        type: 'error',\n        text: `আপলোড করা যায়নি। কারণ: ${err?.message || err?.error_description || 'অজানা সমস্যা'}`,\n       });
+     setMessage({\n        type: 'error',\n        text: `আপলোড করা যায়নি। কারণ: ${err?.message || err?.error_description || 'অজানা সমস্যা'}`,\n      });
     } finally {
       setLoading(false);
     }
