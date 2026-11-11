@@ -126,7 +126,7 @@ export default function AddProductAdmin() {
       setMessage({ type: 'ok', text: 'প্রোডাক্ট সফলভাবে পাবলিশ হয়েছে!', id: data.id });
     } catch (err) {
       console.error(err);
-      setMessage({ type: 'error', text: 'আপলোড করা যায়নি। ইন্টারনেট ও Supabase সেটিং দেখে আবার চেষ্টা করুন।' });
+      "setMessage({\n        type: 'error',\n        text: `আপলোড করা যায়নি। কারণ: ${err?.message || err?.error_description || 'অজানা সমস্যা'}`,\n      });" });
     } finally {
       setLoading(false);
     }
