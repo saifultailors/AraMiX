@@ -103,11 +103,11 @@ export default function AddProductAdmin() {
         .from('products')
         .insert({
           name: productName.trim(),
-          model_no: modelNo.trim(),
+          model: modelNo.trim(),
           price: parseFloat(regularPrice),
           offer_price: offerPrice === '' ? null : parseFloat(offerPrice),
           images: designUrls,
-          colors: colorsWithUrls,
+          color_name: colorsWithUrls,
           sizes: SIZE_LIST.filter((s) => availableSizes[s]),
           allow_custom: allowCustom,
         })
