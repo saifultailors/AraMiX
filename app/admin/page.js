@@ -125,15 +125,17 @@ export default function AddProductAdmin() {
       setColors([newColor()]);
       setMessage({ type: 'ok', text: 'প্রোডাক্ট সফলভাবে পাবলিশ হয়েছে!', id: data.id });
     } catch (err) {
-      console.error(err);
-     setMessage({
+  console.error('Product upload error:', err);
+
+  setMessage({
     type: 'error',
     text: `আপলোড করা যায়নি। কারণ: ${
       err?.message ||
       err?.error_description ||
       'অজানা সমস্যা'
     }`,
-    } finally {
+  });
+} finally {
       setLoading(false);
     }
   };
