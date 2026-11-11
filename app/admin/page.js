@@ -1,7 +1,15 @@
 'use client';
 import { useState } from 'react';
 import { supabase } from '@/lib/supabase';
+import AdminGuard from '@/components/AdminGuard';
 
+export default function AdminPage() {
+  return (
+    <AdminGuard>
+      <AddProductAdmin />
+    </AdminGuard>
+  );
+}
 const BUCKET = 'product-images';
 const SIZE_LIST = ['S', 'M', 'L', 'XL'];
 
@@ -19,7 +27,7 @@ async function uploadFile(file, folder) {
   return supabase.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
 }
 
-export default function AddProductAdmin() {
+ function AddProductAdmin() {
   const [productName, setProductName] = useState('');
   const [modelNo, setModelNo] = useState('');
   const [regularPrice, setRegularPrice] = useState('');
