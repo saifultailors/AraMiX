@@ -84,7 +84,7 @@ export default function HomePage() {
           <Link
             key={product.id}
             href={`/product/${product.id}`}
-            className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition"
+            className="flex flex-col bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition"
           >
             {product.image ? (
               <img src={product.image} alt={product.name} loading="lazy" className="w-full h-64 object-cover bg-gray-100" />
