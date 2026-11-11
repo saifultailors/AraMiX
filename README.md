@@ -1,4 +1,4 @@
-# aramixbd-shop
+# aramixbd-shop 
 
 Next.js (App Router) + Tailwind CSS + Supabase
 
