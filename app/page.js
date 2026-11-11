@@ -1,4 +1,4 @@
-sb_publishable_1tK9e6cEK9ew4vJH4UyT7g_MomQRTAW'use client';
+'use client';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
