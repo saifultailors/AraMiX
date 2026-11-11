@@ -12,7 +12,7 @@ Next.js (App Router) + Tailwind CSS + Supabase
 2. `.env.example` কপি করে `.env.local` নাম দিন এবং Supabase URL ও anon key বসান।
 3. `npm install` তারপর `npm run dev`।
 
-## Vercel
+## Vercel 
 - Framework Preset: Next.js
 - Settings → Environment Variables-এ `NEXT_PUBLIC_SUPABASE_URL` ও `NEXT_PUBLIC_SUPABASE_ANON_KEY` যোগ করে Deploy করুন।
 
