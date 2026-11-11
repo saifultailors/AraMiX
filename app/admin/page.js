@@ -126,7 +126,13 @@ export default function AddProductAdmin() {
       setMessage({ type: 'ok', text: 'প্রোডাক্ট সফলভাবে পাবলিশ হয়েছে!', id: data.id });
     } catch (err) {
       console.error(err);
-     setMessage({\n        type: 'error',\n        text: `আপলোড করা যায়নি। কারণ: ${err?.message || err?.error_description || 'অজানা সমস্যা'}`,\n      });
+     setMessage({
+    type: 'error',
+    text: `আপলোড করা যায়নি। কারণ: ${
+      err?.message ||
+      err?.error_description ||
+      'অজানা সমস্যা'
+    }`,
     } finally {
       setLoading(false);
     }
